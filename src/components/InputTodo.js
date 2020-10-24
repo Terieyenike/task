@@ -16,8 +16,7 @@ const InputTodo = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
-      // window.location = '/';
-      setDescription("")
+      window.location = 'https://terieyenike.github.io/task/';
     } catch (err) {
       console.error(err.message);
     }
