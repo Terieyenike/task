@@ -16,7 +16,8 @@ const InputTodo = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
-      window.location = '/';
+      window.location = 'https://terieyenike.github.io/task/';
+
     } catch (err) {
       console.error(err.message);
     }
@@ -28,7 +29,7 @@ const InputTodo = () => {
         <input
           type='text'
           className='form-control'
-          aria-label="What do you want to achieve today?"
+          aria-label='What do you want to achieve today?'
           value={description}
           onChange={handleInputChange}
         />
