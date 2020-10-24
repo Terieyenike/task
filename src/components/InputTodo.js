@@ -11,7 +11,7 @@ const InputTodo = () => {
     e.preventDefault();
     try {
       const body = { description };
-      await fetch('http://localhost:4001/todos', {
+      await fetch('https://pacific-beyond-99149.herokuapp.com/todos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
@@ -23,11 +23,12 @@ const InputTodo = () => {
   };
   return (
     <>
-      <h1 className='text-center mt-5'>Go Tasks</h1>
+      <h1 className='text-center mt-5'>Journal for task</h1>
       <form className='d-flex mt-5' onSubmit={onSubmitForm}>
         <input
           type='text'
           className='form-control'
+          aria-label="What do you want to achieve today?"
           value={description}
           onChange={handleInputChange}
         />

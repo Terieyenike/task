@@ -9,11 +9,14 @@ const EditTodo = ({ todo }) => {
     try {
       const body = { description };
 
-      await fetch(`http://localhost:4001/todos/${todo.todo_id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      });
+      await fetch(
+        `https://pacific-beyond-99149.herokuapp.com/todos/${todo.todo_id}`,
+        {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        }
+      );
       window.location = '/';
     } catch (err) {
       console.error(err.message);

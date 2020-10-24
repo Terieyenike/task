@@ -5,7 +5,9 @@ const ListTodo = () => {
   const [todos, setTodos] = useState([]);
   const getTodos = async () => {
     try {
-      const resp = await fetch('http://localhost:4001/todos');
+      const resp = await fetch(
+        'https://pacific-beyond-99149.herokuapp.com/todos'
+      );
       const jsonData = await resp.json();
       setTodos(jsonData);
     } catch (err) {
@@ -14,12 +16,12 @@ const ListTodo = () => {
   };
 
   // delete todo function
-  const deleteTodo = async id => {
+  const deleteTodo = async (id) => {
     try {
-      await fetch(`http://localhost:4001/todos/${id}`, {
-        method: 'DELETE'
+      await fetch(`https://pacific-beyond-99149.herokuapp.com/todos/${id}`, {
+        method: 'DELETE',
       });
-      setTodos(todos.filter(todo => todo.todo_id !== id));
+      setTodos(todos.filter((todo) => todo.todo_id !== id));
     } catch (err) {
       console.error(err.message);
     }
@@ -40,7 +42,7 @@ const ListTodo = () => {
           </tr>
         </thead>
         <tbody>
-          {todos.map(todo => (
+          {todos.map((todo) => (
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
               <td>
