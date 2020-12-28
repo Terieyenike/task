@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project gives the user the ability to create, edit, and delete their task from the app.
 
+Also you can check out the backend Postgres CRUD API server [here](https://github.com/Terieyenike/pern-server)
+
+Link to the [Task everyday API](https://pacific-beyond-99149.herokuapp.com/todos)
+
 ### Tech Stack
 
 * React
