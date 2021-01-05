@@ -2,6 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Client side for the Todo Task app
 
+![image](https://user-images.githubusercontent.com/25850598/103670455-e06fea00-4f79-11eb-9560-242adc847d56.png)
+
+
 This project gives the user the ability to create, edit, and delete their task from the app.
 
 Also you can check out the backend Postgres CRUD API server [here](https://github.com/Terieyenike/pern-server)
